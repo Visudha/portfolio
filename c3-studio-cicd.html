@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Continuous integration and deployment | Visudha Sathurappan</title>
+<meta name="description" content="Case study: rethinking release management in C3 AI Studio with a CI/CD workflow for AI application developers.">
+<meta property="og:title" content="Continuous integration and deployment | Visudha Sathurappan">
+<meta property="og:description" content="Case study: rethinking release management in C3 AI Studio with a CI/CD workflow for AI application developers.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#fbf9f6">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap bar">
+<a class="logo" href="/">visudha sathurappan</a>
+<nav aria-label="Main"><a href="/" aria-current="page">work</a><a href="/about">about</a><a href="/resume.pdf">resume</a><a href="/et-al">et al.</a></nav>
+</div></header>
+<main id="main">
+<article class="case">
+<div class="wrap">
+<header class="case-head">
+<p class="mono eyebrow">C3 AI Studio</p>
+<h1>Continuous integration and deployment</h1>
+<p class="sub">Enabling developers to test and build changes</p>
+</header>
+<dl class="meta"><div><dt class="mono">Role</dt><dd>Led the end-to-end UX design and research. Delivered the design with interaction details.</dd></div><div><dt class="mono">Collaborators</dt><dd>PM: KD<br>Eng: Tiffany, Alex, Ryan<br>Tech writer: Jane</dd></div><div><dt class="mono">Timeline</dt><dd>4 months</dd></div></dl>
+<figure class="fig hero"><img src="/img/d51dc-frame.webp" width="1800" height="969" alt="Pipeline view of a build in C3 AI Studio" loading="lazy" decoding="async"></figure>
+<div class="prose">
+<h2>Context</h2>
+<p>C3 AI Studio is an integrated suite of tools designed to empower developers in their interaction with the C3 Platform. By leveraging the C3 platform, developers and data scientists can build and deploy AI applications. Within C3 AI Studio, the Release Management vertical plays a role in facilitating software changes while mitigating risks.</p>
+<h2>How it started</h2>
+<p>There were three main reasons that kickstarted our effort to rethink the existing release management experience.</p>
+<h3>Platform evolution</h3>
+<p>The platform was going through a major shift from V7 to V8, resulting in significant changes to the core concepts of artifact management. This presented a new challenge of ensuring a smooth user experience while introducing and familiarizing users with these new concepts.</p>
+<h3>Enhancing flexibility</h3>
+<p>Although release management was widely used in the V7 platform, users expressed feedback about essential features and configuration options that were lacking. The tool felt restrictive, leaving users with limited alternatives.</p>
+<figure class="fig "><img src="/img/c7c04-v7.webp" width="1800" height="753" alt="V7 build management and V7 test management screens" loading="lazy" decoding="async"></figure>
+<h3>Catering to diverse users</h3>
+<p>The previous experience mainly focused on the application developer persona, but in reality, the user base spanned a wide range of roles, including developers, release managers, and operators. It became crucial to deliver a satisfying experience across these various users.</p>
+<figure class="fig "><img src="/img/ff9e9-frame.webp" width="1800" height="699" alt="The range of user roles in release management" loading="lazy" decoding="async"></figure>
+<h2>Key principles</h2>
+<p>Drawing from prior feedback and user research, I adhered to three key principles that served as our foundation, enabling us to create the best experience.</p>
+<ul class="principles"><li><img src="/img/16292-eff.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><h3>Efficiency</h3><p>Optimize workflows by minimizing repetitive tasks, and automating common actions.</p></li><li><img src="/img/c4b56-learn.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><h3>Visibility</h3><p>Provide immediate and informative feedback to users as they interact with the tool.</p></li><li><img src="/img/619bf-flex.webp" width="128" height="128" alt="" loading="lazy" decoding="async"><h3>Flexibility</h3><p>Empower users to create an environment that enhances their productivity and comfort.</p></li></ul>
+<h2>Outcome</h2>
+<p>Initially, we faced a significant scope for the project. To prioritize effectively, I focused on designing the MVP with a strong emphasis on the continuous integration and continuous deployment workflow. This decision was driven by the importance of satisfying most pressing user and business needs.</p>
+<h3>Build inspection and management</h3>
+<p>Define and manage build execution and configurations. Monitor build progress, status, and logs to track the execution and identify any issues or failures.</p>
+<figure class="fig "><img src="/img/7d37b-inspection.webp" width="1800" height="1198" alt="Build inspection and management screen" loading="lazy" decoding="async"></figure>
+<h3>Pipeline management</h3>
+<p>Visual representations of the pipeline structure, including stages, tasks, and their relationships, for easy understanding and monitoring.</p>
+<figure class="fig "><img src="/img/95d52-pipeline-mgt.webp" width="1800" height="1198" alt="Pipeline management screen showing stages and tasks" loading="lazy" decoding="async"></figure>
+<h3>Logging</h3>
+<p>Collect logs generated during execution for troubleshooting and debugging. Filtering and searching capabilities to quickly locate specific log entries based on keywords, and timestamps.</p>
+<figure class="fig "><img src="/img/7d3d9-logs.webp" width="1800" height="1198" alt="Build logs screen with search and filters" loading="lazy" decoding="async"></figure>
+<h2>Process</h2>
+<p>The path to reaching our goal wasn&#x27;t linear! We went through different processes that included frequent conversation with users and having discussions across cross-functional teams. I want to emphasize a few important aspects of this process.</p>
+<h3>Establishing a common language</h3>
+<p>Early in the process, it became evident that there was a lot of difference in terminology used by both product and engineering teams. This became challenging when ideating on the information architecture since there were various opinions on the relationship between builds and packages, two of the major concepts within release management.</p>
+<p>To address this, I facilitated a collaborative session with users, bringing together product and engineering teams to foster discussion. Through these sessions, we worked towards a consensus on the terminology and concepts, ensuring a shared understanding. Additionally, I created documentation, to capture and document these terms and concepts for the entire team&#x27;s reference.</p>
+<figure class="fig "><img src="/img/7dcf6-ia.webp" width="1800" height="1113" alt="Information architecture for release management" loading="lazy" decoding="async"></figure>
+<h3>Mapping user interactions</h3>
+<p>One of the key milestones in the process was understanding how different users groups interact with each other during the process. While our team had a lot of existing research knowledge about the developer persona, we were lacking in our understanding of the release manager persona.</p>
+<p>To bridge this gap, I organized user interviews with release managers. These interviews were helpful in understanding all our user groups. I also created a journey map to highlight the touch points and how different users groups interact with each other.</p>
+<h3>Component standardization</h3>
+<p>One of the design challenges we tackled in this project was the pipeline diagram. Well into the design process, upon discussions with the design team, we noticed that the diagram component was being used in various ways, and each version looked different. This was tough for our engineers, as they couldn&#x27;t maintain a single component with so many variations.</p>
+<p>The tricky part was that this diagram component was only used in one product, so our design systems team didn&#x27;t have enough resources to standardize it.</p>
+<p>To address this, I took the initiative to standardize the “diagram component” across three different verticals within C3 Studio. This involved a collaborative process that led to the development of a singular pattern, which could be used and configured by both design and engineering teams.</p>
+<figure class="fig "><img src="/img/8d97f-comp.webp" width="1800" height="1828" alt="The standardized pipeline diagram component" loading="lazy" decoding="async"></figure>
+<h2>Impact</h2>
+<p>The release management tool was initially introduced to users during a training workshop, and the response was very positive. We received valuable feedback regarding the overall experience, as well as insightful suggestions for improvement. We are continuously enhancing the tool by incorporating new features, while ensuring good user experience.</p>
+<blockquote><p>Good– love that there’s a UI for this, it saves us a lot of time. Suggestions– It might be nice to see code coverage, why not highlight heavily used code paths that don’t have test coverage in the CI tool?</p></blockquote>
+<blockquote><p>I liked what I saw around visibility into the CI/CD pipeline on V8 and appreciate the work done in building this pipeline directly into the platform.</p></blockquote>
+<p class="note">Please contact <a href="mailto:visudha96@gmail.com">visudha96@gmail.com</a> for the complete case study.</p>
+</div>
+</div>
+</article>
+</main>
+<footer class="site-footer"><div class="wrap">
+<a class="next" href="/c3-studio-core"><span class="mono">Next project</span><span class="next-title">C3 AI Studio: Core utilities <span aria-hidden="true">→</span></span></a>
+<div class="connect">
+<h2>Let’s connect ☺︎</h2>
+<p class="links"><a href="mailto:visudha96@gmail.com">Email</a><a href="https://www.linkedin.com/in/visudha-sathurappan/" rel="noopener">LinkedIn</a></p>
+</div>
+<p class="credit mono">Designed and built by Visudha Sathurappan</p>
+</div></footer>
+</body>
+</html>
