@@ -1,0 +1,160 @@
+title: Continuous integration and deployment
+slug: c3-studio-cicd
+order: 1
+published: true
+eyebrow: C3 AI Studio
+subtitle: Enabling developers to test and build changes
+description: 'Case study: rethinking release management in C3 AI Studio with a CI/CD workflow for AI application developers.'
+intro: []
+next_label: ''
+redirects_from:
+- studio
+meta:
+- label: Role
+  value: Led the end-to-end UX design and research. Delivered the design with interaction details.
+- label: Collaborators
+  value: 'PM: KD
+
+    Eng: Tiffany, Alex, Ryan
+
+    Tech writer: Jane'
+- label: Timeline
+  value: 4 months
+hero:
+  src: /img/d51dc-frame.webp
+  alt: Pipeline view of a build in C3 AI Studio
+card:
+  style: image
+  thumb: /img/d0ed6-studio.webp
+  thumb_alt: 'C3.ai Studio, DevOps: Enabling developers to build and test changes for AI applications'
+blocks:
+- type: heading
+  level: h2
+  text: Context
+- type: paragraph
+  text: C3 AI Studio is an integrated suite of tools designed to empower developers in their interaction with the C3 Platform. By leveraging the C3 platform, developers and data scientists can build and deploy AI applications. Within C3 AI Studio, the Release Management vertical plays a role in facilitating software changes while mitigating risks.
+- type: heading
+  level: h2
+  text: How it started
+- type: paragraph
+  text: There were three main reasons that kickstarted our effort to rethink the existing release management experience.
+- type: heading
+  level: h3
+  text: Platform evolution
+- type: paragraph
+  text: The platform was going through a major shift from V7 to V8, resulting in significant changes to the core concepts of artifact management. This presented a new challenge of ensuring a smooth user experience while introducing and familiarizing users with these new concepts.
+- type: heading
+  level: h3
+  text: Enhancing flexibility
+- type: paragraph
+  text: Although release management was widely used in the V7 platform, users expressed feedback about essential features and configuration options that were lacking. The tool felt restrictive, leaving users with limited alternatives.
+- type: image
+  src: /img/c7c04-v7.webp
+  alt: V7 build management and V7 test management screens
+  caption: ''
+- type: heading
+  level: h3
+  text: Catering to diverse users
+- type: paragraph
+  text: The previous experience mainly focused on the application developer persona, but in reality, the user base spanned a wide range of roles, including developers, release managers, and operators. It became crucial to deliver a satisfying experience across these various users.
+- type: image
+  src: /img/ff9e9-frame.webp
+  alt: The range of user roles in release management
+  caption: ''
+- type: heading
+  level: h2
+  text: Key principles
+- type: paragraph
+  text: Drawing from prior feedback and user research, I adhered to three key principles that served as our foundation, enabling us to create the best experience.
+- type: principles
+  items:
+  - src: /img/16292-eff.webp
+    title: Efficiency
+    text: Optimize workflows by minimizing repetitive tasks, and automating common actions.
+  - src: /img/c4b56-learn.webp
+    title: Visibility
+    text: Provide immediate and informative feedback to users as they interact with the tool.
+  - src: /img/619bf-flex.webp
+    title: Flexibility
+    text: Empower users to create an environment that enhances their productivity and comfort.
+- type: heading
+  level: h2
+  text: Outcome
+- type: paragraph
+  text: Initially, we faced a significant scope for the project. To prioritize effectively, I focused on designing the MVP with a strong emphasis on the continuous integration and continuous deployment workflow. This decision was driven by the importance of satisfying most pressing user and business needs.
+- type: heading
+  level: h3
+  text: Build inspection and management
+- type: paragraph
+  text: Define and manage build execution and configurations. Monitor build progress, status, and logs to track the execution and identify any issues or failures.
+- type: image
+  src: /img/7d37b-inspection.webp
+  alt: Build inspection and management screen
+  caption: ''
+- type: heading
+  level: h3
+  text: Pipeline management
+- type: paragraph
+  text: Visual representations of the pipeline structure, including stages, tasks, and their relationships, for easy understanding and monitoring.
+- type: image
+  src: /img/95d52-pipeline-mgt.webp
+  alt: Pipeline management screen showing stages and tasks
+  caption: ''
+- type: heading
+  level: h3
+  text: Logging
+- type: paragraph
+  text: Collect logs generated during execution for troubleshooting and debugging. Filtering and searching capabilities to quickly locate specific log entries based on keywords, and timestamps.
+- type: image
+  src: /img/7d3d9-logs.webp
+  alt: Build logs screen with search and filters
+  caption: ''
+- type: heading
+  level: h2
+  text: Process
+- type: paragraph
+  text: The path to reaching our goal wasn't linear! We went through different processes that included frequent conversation with users and having discussions across cross-functional teams. I want to emphasize a few important aspects of this process.
+- type: heading
+  level: h3
+  text: Establishing a common language
+- type: paragraph
+  text: Early in the process, it became evident that there was a lot of difference in terminology used by both product and engineering teams. This became challenging when ideating on the information architecture since there were various opinions on the relationship between builds and packages, two of the major concepts within release management.
+- type: paragraph
+  text: To address this, I facilitated a collaborative session with users, bringing together product and engineering teams to foster discussion. Through these sessions, we worked towards a consensus on the terminology and concepts, ensuring a shared understanding. Additionally, I created documentation, to capture and document these terms and concepts for the entire team's reference.
+- type: image
+  src: /img/7dcf6-ia.webp
+  alt: Information architecture for release management
+  caption: ''
+- type: heading
+  level: h3
+  text: Mapping user interactions
+- type: paragraph
+  text: One of the key milestones in the process was understanding how different users groups interact with each other during the process. While our team had a lot of existing research knowledge about the developer persona, we were lacking in our understanding of the release manager persona.
+- type: paragraph
+  text: To bridge this gap, I organized user interviews with release managers. These interviews were helpful in understanding all our user groups. I also created a journey map to highlight the touch points and how different users groups interact with each other.
+- type: heading
+  level: h3
+  text: Component standardization
+- type: paragraph
+  text: One of the design challenges we tackled in this project was the pipeline diagram. Well into the design process, upon discussions with the design team, we noticed that the diagram component was being used in various ways, and each version looked different. This was tough for our engineers, as they couldn't maintain a single component with so many variations.
+- type: paragraph
+  text: The tricky part was that this diagram component was only used in one product, so our design systems team didn't have enough resources to standardize it.
+- type: paragraph
+  text: To address this, I took the initiative to standardize the “diagram component” across three different verticals within C3 Studio. This involved a collaborative process that led to the development of a singular pattern, which could be used and configured by both design and engineering teams.
+- type: image
+  src: /img/8d97f-comp.webp
+  alt: The standardized pipeline diagram component
+  caption: ''
+- type: heading
+  level: h2
+  text: Impact
+- type: paragraph
+  text: The release management tool was initially introduced to users during a training workshop, and the response was very positive. We received valuable feedback regarding the overall experience, as well as insightful suggestions for improvement. We are continuously enhancing the tool by incorporating new features, while ensuring good user experience.
+- type: quote
+  text: Good– love that there’s a UI for this, it saves us a lot of time. Suggestions– It might be nice to see code coverage, why not highlight heavily used code paths that don’t have test coverage in the CI tool?
+  who: ''
+- type: quote
+  text: I liked what I saw around visibility into the CI/CD pipeline on V8 and appreciate the work done in building this pipeline directly into the platform.
+  who: ''
+- type: note
+  text: Please contact [visudha96@gmail.com](mailto:visudha96@gmail.com) for the complete case study.

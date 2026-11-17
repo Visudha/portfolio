@@ -1,0 +1,18 @@
+seo_title: About
+seo_description: Visudha is an engineer turned product designer who designs intentional, inclusive, and human-centered experiences.
+eyebrow: A bit about me
+heading: I’m Visudha, an engineer turned product designer, who wants to design intentional, inclusive, and human-centered experiences.
+intro: I leverage my technical background and systems thinking to strategically break down problems and create digital experiences that are seamless and intuitive. I’m passionate about advocating for users, designing for complex systems, and cross-cultural design.
+portrait:
+  src: ''
+  poster: ''
+  alt: Animated photo of Visudha
+more_eyebrow: A little more
+more:
+- Beyond design, I enjoy reading contemporary fiction, taking long walks, and creating an inane number of Notion pages.
+- I draw values and find inspiration from the books I read. Often times, the subject matter of these books is not design but people. Recent favorites ➝
+books:
+- src: /img/0151d-projecthm.webp
+  alt: A recent favorite book
+- src: /img/26c6f-img-7757.webp
+  alt: Books on a shelf

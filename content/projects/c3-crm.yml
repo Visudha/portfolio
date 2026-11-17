@@ -1,0 +1,49 @@
+title: C3 AI CRM
+slug: c3-crm
+order: 3
+published: true
+eyebrow: C3 AI CRM
+subtitle: AI forecast management and relationship modelling for sales people
+description: 'Overview of my work on C3 AI CRM: Sales Vision, sales pipeline analytics and AI forecast management.'
+intro: []
+next_label: ''
+redirects_from:
+- tools-copy
+meta: []
+hero:
+  src: ''
+  alt: ''
+card:
+  style: image
+  thumb: /img/6ced5-crm.webp
+  thumb_alt: 'C3.ai CRM: AI forecast management and relationship modelling for sales people'
+blocks:
+- type: paragraph
+  text: I utilized user interviews, secondary research, and stakeholder input, to develop key features for the C3 CRM application. Here is a brief overview of the work I have done.
+- type: heading
+  level: h2
+  text: Sales Vision
+- type: paragraph
+  text: Help sales people understand and contextualize the complex interrelationships between their organization, opportunities, internal, and external data.
+- type: image
+  src: /img/4d9e2-sales-vision.webp
+  alt: Sales Vision relationship graph
+  caption: ''
+- type: heading
+  level: h2
+  text: Sales pipeline analytics
+- type: paragraph
+  text: Designed visualizations to help sales executives and account managers to analyze pipe generation and opportunity progression over time.
+- type: image
+  src: /img/0e2d3-sankey.webp
+  alt: Sankey chart of opportunity progression
+  caption: ''
+- type: heading
+  level: h2
+  text: AI forecast management
+- type: paragraph
+  text: Enable an AI-guided workflow for sales reps and sales managers to submit judgment-based forecasts and manage their team’s submissions regularly.
+- type: image
+  src: /img/0ff16-forecast-mgt.webp
+  alt: Forecast management screen
+  caption: ''

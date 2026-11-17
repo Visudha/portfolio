@@ -1,0 +1,16 @@
+site_name: visudha sathurappan
+email: visudha96@gmail.com
+linkedin: https://www.linkedin.com/in/visudha-sathurappan/
+resume: /resume.pdf
+nav:
+- label: work
+  url: /
+- label: about
+  url: /about
+- label: resume
+  url: /resume.pdf
+- label: et al.
+  url: /et-al
+connect_title: Let’s connect ☺︎
+credit: Designed and built by Visudha Sathurappan
+site_url: https://example.com

@@ -1,0 +1,260 @@
+# Decap CMS. Edits are committed to GitHub, and Vercel rebuilds the site.
+# Local editing: run `npx decap-server` in a second terminal, then open /admin on the dev server.
+local_backend: true
+
+backend:
+  name: github
+  repo: Visudha/portfolio
+  branch: main
+  # Hosted login needs an OAuth proxy. Set its address here once it exists.
+  # base_url: https://YOUR-OAUTH-PROXY.example.com
+
+publish_mode: simple
+media_folder: public/img
+public_folder: /img
+site_url: https://example.com
+display_url: https://example.com
+
+# Reusable field sets
+image_field: &image
+  { label: Image, name: src, widget: image, required: false, choose_url: false }
+
+collections:
+  - name: projects
+    label: Case studies
+    label_singular: Case study
+    folder: content/projects
+    extension: yml
+    format: yml
+    create: true
+    identifier_field: title
+    slug: "{{slug}}"
+    summary: "{{order}}. {{title}}"
+    sortable_fields: [order, title]
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: URL slug, name: slug, widget: string, hint: "Appears in the web address. Changing it breaks old links." }
+      - { label: Order on home page, name: order, widget: number, value_type: int, min: 1 }
+      - { label: Published, name: published, widget: boolean, default: true }
+      - { label: Eyebrow, name: eyebrow, widget: string }
+      - { label: Subtitle, name: subtitle, widget: text }
+      - { label: Search and share description, name: description, widget: text }
+      - { label: Intro paragraphs, name: intro, widget: list, required: false, field: { label: Paragraph, name: text, widget: text } }
+      - { label: Label in "next project" link, name: next_label, widget: string, required: false, hint: "Leave empty to use the title." }
+      - { label: Old URLs that should redirect here, name: redirects_from, widget: list, required: false, field: { label: Old slug, name: slug, widget: string } }
+      - label: Details
+        name: meta
+        widget: list
+        required: false
+        summary: "{{fields.label}}"
+        fields:
+          - { label: Label, name: label, widget: string }
+          - { label: Value, name: value, widget: text, hint: "One item per line." }
+      - label: Hero image
+        name: hero
+        widget: object
+        required: false
+        fields:
+          - *image
+          - { label: Alt text, name: alt, widget: string, required: false }
+      - label: Home page card
+        name: card
+        widget: object
+        fields:
+          - { label: Style, name: style, widget: select, options: [{ label: Image only, value: image }, { label: Color with text, value: text }] }
+          - { label: Thumbnail (image style), name: thumb, widget: image, required: false, choose_url: false }
+          - { label: Thumbnail alt text, name: thumb_alt, widget: string, required: false }
+          - { label: Background color (text style), name: bg, widget: color, required: false }
+          - { label: Bold label, name: label_bold, widget: string, required: false }
+          - { label: Rest of label, name: label_rest, widget: string, required: false }
+          - { label: Headline, name: headline, widget: string, required: false }
+          - { label: Picture (text style), name: media, widget: image, required: false, choose_url: false }
+      - label: Page content
+        name: blocks
+        widget: list
+        typeKey: type
+        types:
+          - label: Heading
+            name: heading
+            widget: object
+            summary: "{{fields.text}}"
+            fields:
+              - { label: Level, name: level, widget: select, options: [{ label: Section (large), value: h2 }, { label: Subsection, value: h3 }], default: h2 }
+              - { label: Text, name: text, widget: string }
+          - label: Paragraph
+            name: paragraph
+            widget: object
+            summary: "{{fields.text}}"
+            fields:
+              - { label: Text, name: text, widget: text, hint: "Links: [text](https://...)" }
+          - label: Research question
+            name: ask
+            widget: object
+            summary: "{{fields.text}}"
+            fields:
+              - { label: Text, name: text, widget: text }
+          - label: Image
+            name: image
+            widget: object
+            summary: "{{fields.alt}}"
+            fields:
+              - *image
+              - { label: Alt text, name: alt, widget: string, hint: "Describe the image for people who cannot see it." }
+              - { label: Caption, name: caption, widget: string, required: false }
+          - label: Image row
+            name: images
+            widget: object
+            fields:
+              - label: Images
+                name: items
+                widget: list
+                summary: "{{fields.alt}}"
+                fields:
+                  - *image
+                  - { label: Alt text, name: alt, widget: string }
+          - label: Looping video
+            name: video
+            widget: object
+            summary: "{{fields.alt}}"
+            fields:
+              - { label: Video (mp4), name: src, widget: file, required: false, choose_url: false }
+              - { label: Poster image, name: poster, widget: image, required: false, choose_url: false }
+              - { label: Alt text, name: alt, widget: string }
+          - label: Quote
+            name: quote
+            widget: object
+            summary: "{{fields.text}}"
+            fields:
+              - { label: Quote, name: text, widget: text }
+              - { label: Who said it, name: who, widget: string, required: false }
+          - label: List
+            name: list
+            widget: object
+            fields:
+              - { label: Numbered, name: ordered, widget: boolean, default: false }
+              - { label: Items, name: items, widget: list, field: { label: Item, name: text, widget: string } }
+          - label: Stats
+            name: stats
+            widget: object
+            fields:
+              - label: Stats
+                name: items
+                widget: list
+                summary: "{{fields.number}}"
+                fields:
+                  - { label: Number, name: number, widget: string }
+                  - { label: Label, name: label, widget: string }
+          - label: Principles
+            name: principles
+            widget: object
+            fields:
+              - label: Principles
+                name: items
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - *image
+                  - { label: Title, name: title, widget: string }
+                  - { label: Text, name: text, widget: text }
+          - label: Note
+            name: note
+            widget: object
+            summary: "{{fields.text}}"
+            fields:
+              - { label: Text, name: text, widget: text }
+
+  - name: etal
+    label: Et al. projects
+    label_singular: Et al. project
+    folder: content/etal
+    extension: yml
+    format: yml
+    create: true
+    identifier_field: title
+    slug: "{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: URL slug, name: slug, widget: string }
+      - { label: Order, name: order, widget: number, value_type: int, min: 1 }
+      - { label: Published, name: published, widget: boolean, default: true }
+      - { label: Thumbnail, name: thumb, widget: image, required: false, choose_url: false }
+      - { label: Card color (used when there is no thumbnail), name: card_color, widget: color, required: false }
+      - { label: External link, name: external_url, widget: string, required: false, hint: "Leave empty to open a gallery page on this site." }
+      - { label: Button text, name: cta, widget: string, required: false }
+      - { label: Gallery page heading, name: page_heading, widget: string, required: false }
+      - { label: Search and share description, name: description, widget: text, required: false }
+      - label: Gallery
+        name: gallery
+        widget: list
+        required: false
+        summary: "{{fields.alt}}"
+        fields:
+          - *image
+          - { label: Alt text, name: alt, widget: string }
+
+  - name: pages
+    label: Pages and settings
+    files:
+      - name: home
+        label: Home page
+        file: content/pages/home.yml
+        fields:
+          - { label: Search title, name: seo_title, widget: string }
+          - { label: Search description, name: seo_description, widget: text }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Emoji, name: emoji, widget: string, required: false }
+          - { label: Subline, name: subline, widget: text }
+          - { label: Current role text, name: now_text, widget: string }
+          - { label: Current role link text, name: now_link_text, widget: string }
+          - { label: Current role link, name: now_link_url, widget: string }
+          - { label: Work section title, name: work_title, widget: string }
+      - name: about
+        label: About page
+        file: content/pages/about.yml
+        fields:
+          - { label: Search title, name: seo_title, widget: string }
+          - { label: Search description, name: seo_description, widget: text }
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Heading, name: heading, widget: text }
+          - { label: Intro, name: intro, widget: text }
+          - label: Portrait
+            name: portrait
+            widget: object
+            fields:
+              - { label: Video (mp4), name: src, widget: file, required: false, choose_url: false }
+              - { label: Poster image, name: poster, widget: image, required: false, choose_url: false }
+              - { label: Alt text, name: alt, widget: string, required: false }
+          - { label: Second eyebrow, name: more_eyebrow, widget: string }
+          - { label: More paragraphs, name: more, widget: list, field: { label: Paragraph, name: text, widget: text } }
+          - label: Book photos
+            name: books
+            widget: list
+            fields:
+              - *image
+              - { label: Alt text, name: alt, widget: string }
+      - name: etal_index
+        label: Et al. page
+        file: content/pages/etal.yml
+        fields:
+          - { label: Search title, name: seo_title, widget: string }
+          - { label: Search description, name: seo_description, widget: text }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subline, name: subline, widget: text }
+      - name: settings
+        label: Site settings
+        file: content/settings.yml
+        fields:
+          - { label: Site name, name: site_name, widget: string }
+          - { label: Email, name: email, widget: string }
+          - { label: LinkedIn URL, name: linkedin, widget: string }
+          - { label: Resume file, name: resume, widget: string }
+          - { label: Site address, name: site_url, widget: string, hint: "Used for share previews. Set to your real domain." }
+          - { label: Connect heading, name: connect_title, widget: string }
+          - { label: Footer credit, name: credit, widget: string }
+          - label: Navigation
+            name: nav
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Link, name: url, widget: string }

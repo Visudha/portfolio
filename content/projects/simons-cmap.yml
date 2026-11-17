@@ -1,0 +1,168 @@
+title: Collaborative Marine Atlas Project (CMAP)
+slug: simons-cmap
+order: 5
+published: true
+eyebrow: UX design and usability testing
+subtitle: Redesigning an open source data portal to meet the needs of oceanographers.
+description: 'Case study: redesigning Simons CMAP, an open source data portal for oceanographers, from usability study to hi-fidelity prototype.'
+intro:
+- Simons CMAP is a data portal that houses large ocean science datasets. The platform also supports data visualisation based on region, date, and other similar variables.
+- The project that started as a user study with a group of UX Researchers, evolved into a passion project in which I redesigned the data portal.
+next_label: ''
+redirects_from: []
+meta:
+- label: My role
+  value: The usability testing was done in collaboration with UX Researchers and I was the sole designer (passion project) involved in the ideation, design and prototyping.
+- label: Tools
+  value: Figma, Adobe Illustrator, Stark, Framer
+- label: Collaborators
+  value: 4 UX Researchers
+- label: Timeline
+  value: 12 weeks
+hero:
+  src: /img/710c2-cmap-hero-image.webp
+  alt: Redesigned CMAP catalog page
+card:
+  style: text
+  bg: '#deecf5'
+  label_bold: CMAP
+  label_rest: UX Design & Usability Testing
+  headline: Redesigning an open source data portal for oceanographers
+  media: /img/710c2-cmap-hero-image.webp
+blocks:
+- type: heading
+  level: h2
+  text: Context
+- type: paragraph
+  text: I was part of a research team at the University of Washington that worked with the team that designed and built SIMONS CMAP, an open source data portal for oceanographers. Our team was tasked with identifying user needs and testing if the portal met the needs of oceanographers or anyone who might have access to it. We conducted usability studies that combined task based analysis and exploratory questions to identify user types and pain points.
+- type: heading
+  level: h3
+  text: Initial brief
+- type: ask
+  text: Discover the needs of people who search for ocean science data sets and evaluate the efficiency of the CMAP tool in helping satisfy these needs.
+- type: image
+  src: ''
+  alt: Snapshot of the final CMAP design
+  caption: A snapshot of the final design
+- type: heading
+  level: h2
+  text: Insights from user research
+- type: paragraph
+  text: After conducting usability tests and interviews, we drew some common themes and recurring pain points. These themes include large issues about the workflow to small usability and aesthetic issues.
+- type: heading
+  level: h3
+  text: Data lookup was hard
+- type: paragraph
+  text: Data lookup was time consuming and not straightforward. The data tables could be filtered by dragging column names but this feature wasn’t apparent to the participants. Additionally, the default state of the Catalog page displayed the datasets filtered by their names. This default state was misleading to users who might want to explore the original data sets.
+- type: heading
+  level: h3
+  text: Visualisation feature was not apparent
+- type: paragraph
+  text: Participants were used to downloading datasets on their computer to visualise it on Microsoft Excel or other similar tools. Hence, when asked to visualise datasets on CMAP, participants usually downloaded datasets instead of using the visualisation tool within the platform.
+- type: heading
+  level: h3
+  text: Lots of scrolling
+- type: paragraph
+  text: Participants scrolled through the data tables in many instances either to find a specific dataset or to explore. Since CMAP has a large number of datasets, participants often didn’t know what to expect or when to stop searching.
+- type: heading
+  level: h3
+  text: Vague terms and jargon
+- type: paragraph
+  text: CMAP used quite a few technical terms that some participants found to be vague, leaving them lost for context. For example, the datasets on the Catalog page were filtered by their ‘long name’ and some participant said that they didn’t understand what that meant.
+- type: heading
+  level: h2
+  text: Two broad types of users emerged
+- type: paragraph
+  text: 'The user research also helped us discover that there are two types of users who might use CMAP: The Specialist and The Explorer. For this project, I decided to focus on the Explorer persona because of the frustrations they experienced when using a data portal.'
+- type: images
+  items:
+  - src: /img/9074b-user2-1.webp
+    alt: 'Persona: the Specialist or Explorer'
+  - src: ''
+    alt: 'Persona: the Specialist or Explorer'
+- type: heading
+  level: h2
+  text: Mapping user workflows
+- type: paragraph
+  text: To better understand the workflows of the Explorer persona, I mapped out high level user flows during data lookup and data visualisation. This activity revealed two major problem areas which hindered workflows. The first pain point was the lack of discoverability and a Catalog page that didn’t encourage exploration. The second issue was the break in the workflow that required users to lookup data twice when wanting to visualise a particular dataset.
+- type: image
+  src: ''
+  alt: High level user flows for data lookup and visualisation
+  caption: ''
+- type: ask
+  text: How can users explore and visualize ocean science data sets that might be new to them?
+- type: heading
+  level: h2
+  text: Design
+- type: heading
+  level: h3
+  text: Rapid wireframing to explore design ideas
+- type: paragraph
+  text: 'To explore multiple design ideas, I took to creating wireframes to visualise and evaluate each decision. For example, to enable easy lookup in the Catalog Page, I decided to utilise filters. I explored multiple designs to enable search filtering: a horizontal toolbar, utilising a sidebar, or column-wise filters as in Excel.'
+- type: image
+  src: /img/87bcf-wireframes.webp
+  alt: Wireframes exploring search filter layouts
+  caption: ''
+- type: heading
+  level: h3
+  text: Refreshing the visual system
+- type: paragraph
+  text: The participants appreciated the visual system of the existing design since they weren’t used to data portals that employed a good visual sense. Despite this, I wanted to tweak the visual system. The first reason was that the colors employed didn’t meet accessibility standards and there were color contrast issues. The second change was using cohesive icons to replace the old icons that lacked context.
+- type: image
+  src: /img/ad583-visual-system.webp
+  alt: Refreshed visual system with colors and icons
+  caption: ''
+- type: heading
+  level: h3
+  text: Hi-fidelity designs
+- type: paragraph
+  text: After designing individual components, I prototyped the designs in hi-fidelity on Figma. Below, I showcase some major changes, screens, and workflows.
+- type: image
+  src: /img/301d7-catalog-page.webp
+  alt: Redesigned Catalog page
+  caption: ''
+- type: heading
+  level: h3
+  text: Search filters for lookup
+- type: paragraph
+  text: The Catalog page was redesigned to include a sidebar with search filters. Additionally I added cues to indicate that a search was successful. I also fixed the information hierarchy of the dataset cards to make it more readable.
+- type: heading
+  level: h3
+  text: Better data tables
+- type: paragraph
+  text: I also redesigned the data tables for easy parsing. I included a toggle menu to house the longer dataset details. I introduced icons for repetitive action, for example each row has a visualise action.
+- type: image
+  src: ''
+  alt: Redesigned data table with a details toggle
+  caption: ''
+- type: video
+  src: ''
+  poster: ''
+  alt: Visualising data directly from the Catalog page
+- type: heading
+  level: h3
+  text: Efficient workflow
+- type: paragraph
+  text: I also added functionality to directly visualise data variables from the Catalog page. With this feature, users don’t have to lookup data twice.
+- type: heading
+  level: h2
+  text: What did impact look like?
+- type: paragraph
+  text: To measure the impact of the new changes, I decided to conduct usability tests with a set of participants who fit the Explorer persona. The time on task and task completion was calculated. For certain tasks, think aloud protocol was employed to gather qualitative data. Users expressed satisfaction with the redesigned user flow.
+- type: image
+  src: /img/e84b8-cmap-impact.webp
+  alt: Usability test results
+  caption: ''
+- type: heading
+  level: h2
+  text: Takeaways
+- type: heading
+  level: h3
+  text: Designing for disadvantaged user groups
+- type: paragraph
+  text: In this project, focusing on the Explorer persona helped reveal many common issues while uncovering specific issues pertaining to the persona. I believe that by solving for the disadvantaged user (not a subject matter expert), we end up thinking about workflows and sitemaps in more granularity thereby generating richer ideas.
+- type: heading
+  level: h3
+  text: Don’t be afraid to experiment with new patterns
+- type: paragraph
+  text: While I used many tried and tested design patterns, I learned that it is okay to experiment with new patterns in certain situations. This process also got me excited to design for new experiences.

@@ -1,9 +1,37 @@
-# Portfolio
+# Visudha Sathurappan, portfolio
 
-Static site. No build step. Deploy on Vercel as a plain static project.
+Next.js static export. Content lives in `content/` as YAML and is edited through Decap CMS at `/admin`.
 
-- `index.html`, `about.html`, `et-al.html`, `food-memories.html`: main pages
-- `c3-studio-cicd.html`, `c3-studio-core.html`, `c3-crm.html`, `compass.html`, `simons-cmap.html`: case studies
-- `img/`: optimized images (WebP) and looping clips (MP4)
-- `resume.pdf`: replace this file to update the resume link
-- `vercel.json`: clean URLs, redirects from the old Webflow paths, caching headers
+## Run it locally
+
+```
+npm install
+npm run dev
+```
+
+Open http://localhost:3000.
+
+## Edit content in the browser
+
+In a second terminal:
+
+```
+npx decap-server
+```
+
+Then open http://localhost:3000/admin. Local mode needs no login. Changes are written to `content/` and `public/img/`. Commit and push them to publish.
+
+## Structure
+
+- `content/projects/*.yml`: case studies. Each page is an ordered list of blocks.
+- `content/etal/*.yml`: additional projects.
+- `content/pages/*.yml` and `content/settings.yml`: home, about, Et al. page text, and site settings.
+- `public/admin/config.yml`: the CMS form definitions.
+- `app/`, `components/`, `lib/`: the Next.js code.
+- `npm run build` writes `out/` and regenerates `vercel.json` (old-URL redirects and cache headers).
+
+## Open items
+
+- Set `site_url` in `content/settings.yml` and `public/admin/config.yml` to the real domain.
+- Hosted CMS login needs an OAuth proxy. Set `backend.base_url` in `public/admin/config.yml` when it exists.
+- 17 image fields are blank. Upload them in `/admin`.

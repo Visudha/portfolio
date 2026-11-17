@@ -1,0 +1,260 @@
+title: Compass
+slug: compass
+order: 4
+published: true
+eyebrow: UX/UI design and UX research
+subtitle: A mobile application to help college students find interest groups on campus to better engage with the student community.
+description: 'Case study: Compass, a mobile app concept that helps University of Washington students find campus interest groups.'
+intro: []
+next_label: ''
+redirects_from:
+- compass-new
+meta:
+- label: My role
+  value: Drafted the interview protocol, conducted user interviews and performed competitive analysis. Designed user flows and mocked up high fidelity prototypes on Figma. Conducted usability tests and iterated on the designs.
+- label: Tools
+  value: Balsamiq, Figma, Pen and Paper
+- label: Collaborators
+  value: Nick Gorlovski, Peggy Zhang
+- label: Timeline
+  value: Sep 2019 – Dec 2019
+hero:
+  src: ''
+  alt: Compass app screens
+card:
+  style: text
+  bg: '#ffc8c8'
+  label_bold: Compass
+  label_rest: UX/UI Design & UX Research
+  headline: A mobile app to help college students find interest groups on campus
+  media: ''
+blocks:
+- type: heading
+  level: h2
+  text: The project
+- type: heading
+  level: h3
+  text: Inspiration
+- type: paragraph
+  text: There is typically no shortage of resources for college students to use, but the way they are organized is not always logical, accessible, or user-friendly. There isn’t a dedicated platform that allows students to collaborate and cooperate with the student community.
+- type: heading
+  level: h3
+  text: Our goal
+- type: paragraph
+  text: To turn what might be an impersonal campus experience into a community-like experience where students can share resources.
+- type: heading
+  level: h3
+  text: Research question
+- type: ask
+  text: How might we design a solution that enables college students to naturally engage in social and academic activities in their college experience while simultaneously contributing to the student community?
+- type: image
+  src: /img/b01d5-img-20200207-140434-01-01.webp
+  alt: A bulletin board on campus
+  caption: Picture of a bulletin board on campus
+- type: heading
+  level: h2
+  text: Research
+- type: heading
+  level: h3
+  text: Survey
+- type: paragraph
+  text: The survey covered key aspects of target users’ experiences through satisfaction, multiple choice questions, and agreement scales. We received 59 responses.
+- type: stats
+  items:
+  - number: 88.1%
+    label: heard about collaboration opportunities from their classmates.
+  - number: 47.5%
+    label: didn’t feel a connection with the student community.
+  - number: 25.4%
+    label: said it is easy to keep up with activities in the student community.
+- type: heading
+  level: h3
+  text: Interviews
+- type: paragraph
+  text: We chose IDIs both for convenience and ability to probe more deeply on our areas of interest. To invite participants, we put together a quick survey which resulted in 5 interested participants. We conducted 3 interviews in person and 2 remote using the protocol we developed as a team.
+- type: heading
+  level: h3
+  text: Competitive analysis
+- type: paragraph
+  text: Since our solution is a mobile application, we decided to conduct a competitive assessment of the available apps that aim to address some of the same user needs as our proposed solution. We approached this analysis by
+- type: image
+  src: ''
+  alt: Competitive analysis of similar apps
+  caption: ''
+- type: quote
+  text: I want to go try rock climbing, but I don’t know anyone who does it. I don’t know where to go. Yeah, unless like I know someone around, I can ask them, but if I don’t, then I don’t know where to go.
+  who: Participant 1
+- type: heading
+  level: h2
+  text: Analysis
+- type: heading
+  level: h3
+  text: Thematic analysis
+- type: paragraph
+  text: After the user research, we used affinity mapping to identify themes in our data.
+- type: list
+  ordered: true
+  items:
+  - Wrote down the codes that most represented the data
+  - Rearranged the notes to identify common themes
+  - Substituted each theme with a ‘How might we’ question
+- type: paragraph
+  text: This activity helped us refine our design question and identify our primary user persona.
+- type: image
+  src: /img/b01c5-img-20191017-192056.webp
+  alt: The team building How Might We questions
+  caption: Building ‘How Might We’ questions with the team
+- type: heading
+  level: h2
+  text: Insights
+- type: heading
+  level: h3
+  text: I. Navigating through resources is hard
+- type: paragraph
+  text: Even if there were so many resources available around campus, students still found it hard to navigate through all of them. This was mainly due to the fact that was currently no single platform that focused on helping students discover events or clubs on campus.
+- type: heading
+  level: h3
+  text: II. Difficult to form student connections
+- type: paragraph
+  text: One insight from the interviews was that students tended to form groups within the people they already knew because they couldn’t find another way to join a group with students of the same interests, both academically and socially.
+- type: heading
+  level: h3
+  text: III. Not exposed to new opportunities
+- type: paragraph
+  text: There was lack of appropriate guidance for students to learn about other on-campus collaboration opportunities outside of their social circle.
+- type: heading
+  level: h2
+  text: Visualizing user needs
+- type: heading
+  level: h3
+  text: Empathy map
+- type: paragraph
+  text: We designed empathy maps to better define the attitudes and behaviours of the user groups.
+- type: image
+  src: ''
+  alt: Empathy map for the primary user
+  caption: ''
+- type: heading
+  level: h3
+  text: Design requirements
+- type: image
+  src: ''
+  alt: Design requirements
+  caption: ''
+- type: heading
+  level: h3
+  text: Refined design question
+- type: ask
+  text: How can we design a mobile application that enables college students to find and engage with interest groups on campus in order to enhance college experience for themselves and others?
+- type: heading
+  level: h2
+  text: Ideation
+- type: heading
+  level: h3
+  text: Messy sketches
+- type: paragraph
+  text: Based on the insights gathered we brainstormed some feature ideas as a team in the form of rough sketches. We then grouped similar features and talked through pros and cons for each of them. Finally, the team did dot voting to prioritize and select features to prototype.
+- type: paragraph
+  text: Below, I detail some of the design decision that I made.
+- type: heading
+  level: h3
+  text: Bridging the gap between groups and events
+- type: image
+  src: ''
+  alt: Sketch of the relationship between groups and events
+  caption: ''
+- type: paragraph
+  text: 'To structure the information we had to introduce two levels of separation: groups and events. Every event would belong to a group and the group could either be an official UW body or a casual group. This would ensure content moderation.'
+- type: heading
+  level: h3
+  text: How might conversations happen within groups?
+- type: image
+  src: ''
+  alt: Sketches exploring conversations within groups
+  caption: ''
+- type: heading
+  level: h3
+  text: User flow
+- type: paragraph
+  text: We created user flows for each scenario to better understand how information is going to be laid out. The diagram below is the happy path for a user who wants to joins a new group.
+- type: image
+  src: ''
+  alt: User flow for finding and joining a group
+  caption: Ideal path for user finding and joining a group
+- type: heading
+  level: h2
+  text: Prototyping and user feedback
+- type: paragraph
+  text: We conducted usability tests on our mid fidelity prototypes. The usability tests were quick and dirty. They were conducted with 3 participants in 2 rounds.
+- type: paragraph
+  text: 'Below were some of the important insights:'
+- type: heading
+  level: h3
+  text: Inconsistency hindered discoverability
+- type: paragraph
+  text: The design of My Groups card and Suggested Groups card was intentional because a user might want to read a short description of the group when exploring but wouldn’t want to read descriptions when they are already part of the group. But the same can’t be said about Suggested Events on homepage and explore page, the design is inconsistent.
+- type: image
+  src: ''
+  alt: Inconsistent card designs
+  caption: ''
+- type: heading
+  level: h3
+  text: Notifications were hard to find
+- type: paragraph
+  text: Participants were confused by the placement of the notification section in the user profile page. The design also made it harder to view notification history.
+- type: image
+  src: ''
+  alt: Notifications in the profile page
+  caption: ''
+- type: heading
+  level: h3
+  text: Events don’t have a place of their own
+- type: paragraph
+  text: Upcoming Events section lists the events that the user has registered and will receive notifications for. Listing them all on the homepage wouldn’t be an efficient solution in any case that the user is registered for more than 3 events. Participants expressed the need to visualize events based on date and time.
+- type: image
+  src: /img/b022a-calendar.webp
+  alt: Calendar view for events
+  caption: ''
+- type: heading
+  level: h2
+  text: Design iteration
+- type: paragraph
+  text: 'The findings from the usability tests were used to drive design decisions for the final interactive prototype. Here’s a highlight of few exciting features:'
+- type: heading
+  level: h3
+  text: Encouraging exploration
+- type: paragraph
+  text: At every step we wanted to provide options and cues for the users to explore groups and events. Exploration is possible either through suggested content or through carefully curated categories.
+- type: video
+  src: /img/b022f-explore.mp4
+  poster: /img/b022f-explore-poster.webp
+  alt: Exploring groups and events in the app
+- type: heading
+  level: h3
+  text: Message wall
+- type: paragraph
+  text: We wanted to introduce a way for members within a group to communicate. We didn’t want to go the traditional messaging interface as one of the objectives was to find an effective way to connect virtual and real life environments. We believe message walls in each group would provide a fun and engaging way of communication. To better regulate the content, the wall is cleared once every 7 days.
+- type: video
+  src: /img/b022e-message-wall.mp4
+  poster: /img/b022e-message-wall-poster.webp
+  alt: A group message wall in the app
+- type: heading
+  level: h2
+  text: Limitations
+- type: paragraph
+  text: About 50% of the respondents to the survey were HCDE undergraduate and graduate students since they were an easily accessible population. Having equal responses from the other UW departments may have yielded slightly different and richer results.
+- type: paragraph
+  text: Since the user research was done only with The University of Washington, the transferability of the application to other schools still has to be examined.
+- type: heading
+  level: h2
+  text: Reflections
+- type: heading
+  level: h3
+  text: The study
+- type: paragraph
+  text: The issues surrounding privacy and communication in these groups are still to be addressed. Our inspirational wish list includes the addition of campus maps and facilities, which a lot of our users expressed a need for, but was beyond the scope of our project.
+- type: heading
+  level: h3
+  text: Self
+- type: paragraph
+  text: We started the project with a broad problem area and understanding. Once we got done with the exploratory research, we decided to focus on a specific problem and set up certain constraints for ourselves. This step helped us dig deeper into the problem space and identify actionable solutions. I learnt to embrace and enjoy designing with constraints through this project.
