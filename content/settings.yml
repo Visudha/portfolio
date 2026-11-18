@@ -7,6 +7,7 @@ nav:
   url: /
 - label: about
   url: /about
+show_etal: false
 connect_title: Let’s connect ☺︎
 credit: Designed and built by Visudha Sathurappan
 site_url: https://example.com

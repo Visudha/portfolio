@@ -24,6 +24,7 @@ Then open http://localhost:3000/admin. Local mode needs no login. Changes are wr
 ## Structure
 
 - `content/projects/*.yml`: case studies. Each page is an ordered list of blocks.
+- `content/etal/*.yml`: additional projects. Hidden unless "Show the Et al. section" is on in Site settings.
 - `content/pages/*.yml` and `content/settings.yml`: home and about page text, and site settings.
 - `public/admin/config.yml`: the CMS form definitions.
 - `app/`, `components/`, `lib/`: the Next.js code.

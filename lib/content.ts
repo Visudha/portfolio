@@ -25,6 +25,8 @@ function readDir(dir: string): any[] {
 export const getSettings = () => readYaml('settings.yml');
 export const getPage = (name: string) => readYaml(`pages/${name}.yml`);
 export const getProjects = () => readDir('projects');
+export const getEtal = () => readDir('etal');
+export const etalEnabled = () => getSettings().show_etal === true;
 
 export function getProject(slug: string) {
   const all = getProjects();

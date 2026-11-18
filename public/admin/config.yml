@@ -163,6 +163,35 @@ collections:
             fields:
               - { label: Text, name: text, widget: text }
 
+  - name: etal
+    label: Et al. projects
+    label_singular: Et al. project
+    folder: content/etal
+    extension: yml
+    format: yml
+    create: true
+    identifier_field: title
+    slug: "{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: URL slug, name: slug, widget: string }
+      - { label: Order, name: order, widget: number, value_type: int, min: 1 }
+      - { label: Published, name: published, widget: boolean, default: true }
+      - { label: Thumbnail, name: thumb, widget: image, required: false, choose_url: false }
+      - { label: Card color (used when there is no thumbnail), name: card_color, widget: color, required: false }
+      - { label: External link, name: external_url, widget: string, required: false, hint: "Leave empty to open a gallery page on this site." }
+      - { label: Button text, name: cta, widget: string, required: false }
+      - { label: Gallery page heading, name: page_heading, widget: string, required: false }
+      - { label: Search and share description, name: description, widget: text, required: false }
+      - label: Gallery
+        name: gallery
+        widget: list
+        required: false
+        summary: "{{fields.alt}}"
+        fields:
+          - *image
+          - { label: Alt text, name: alt, widget: string }
+
   - name: pages
     label: Pages and settings
     files:
@@ -203,6 +232,14 @@ collections:
             fields:
               - *image
               - { label: Alt text, name: alt, widget: string }
+      - name: etal_index
+        label: Et al. page
+        file: content/pages/etal.yml
+        fields:
+          - { label: Search title, name: seo_title, widget: string }
+          - { label: Search description, name: seo_description, widget: text }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subline, name: subline, widget: text }
       - name: settings
         label: Site settings
         file: content/settings.yml
@@ -212,6 +249,7 @@ collections:
           - { label: LinkedIn URL, name: linkedin, widget: string }
           - { label: Resume file, name: resume, widget: string }
           - { label: Site address, name: site_url, widget: string, hint: "Used for share previews. Set to your real domain." }
+          - { label: Show the Et al. section, name: show_etal, widget: boolean, default: false, hint: "Off hides the Et al. pages entirely. Also add or remove its link under Navigation." }
           - { label: Connect heading, name: connect_title, widget: string }
           - { label: Footer credit, name: credit, widget: string }
           - label: Navigation

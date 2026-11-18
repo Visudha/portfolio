@@ -2,12 +2,17 @@ import type { Metadata } from 'next';
 import { Header, Footer } from '@/components/Chrome';
 import Blocks from '@/components/Blocks';
 import Fig from '@/components/Fig';
-import { getProject, getProjects, lines } from '@/lib/content';
+import EtalIndex from '@/components/EtalIndex';
+import { etalEnabled, getEtal, getPage, getProject, getProjects, lines } from '@/lib/content';
 
 export const dynamicParams = false;
 
+// Et al. pages are built only when "Show the Et al. section" is on in Site settings.
 export function generateStaticParams() {
-  return getProjects().map((p) => ({ slug: p.slug }));
+  const proj = getProjects().map((p) => ({ slug: p.slug }));
+  if (!etalEnabled()) return proj;
+  const etal = getEtal().filter((e) => !e.external_url).map((e) => ({ slug: e.slug }));
+  return [...proj, { slug: 'et-al' }, ...etal];
 }
 
 type Params = { params: Promise<{ slug: string }> };
@@ -15,7 +20,14 @@ type Params = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
   const found = getProject(slug);
-  if (!found) return {};
+  if (!found) {
+    if (slug === 'et-al') {
+      const pg = getPage('etal');
+      return { title: pg.seo_title, description: pg.seo_description };
+    }
+    const e = getEtal().find((x) => x.slug === slug);
+    return { title: e?.page_heading || e?.title, description: e?.description };
+  }
   const p = found.project;
   const img = p.hero?.src || p.card?.thumb || p.card?.media;
   return {
@@ -27,7 +39,29 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
 export default async function Page({ params }: Params) {
   const { slug } = await params;
-  const found = getProject(slug)!;
+  const found = getProject(slug);
+  if (!found) {
+    if (slug === 'et-al') return <EtalIndex />;
+    const e = getEtal().find((x) => x.slug === slug && !x.external_url)!;
+    return (
+      <>
+        <Header active="et al." />
+        <main id="main">
+          <section className="etal">
+            <div className="wrap">
+              <h1>{e.page_heading || e.title}</h1>
+              <div className="gallery">
+                {(e.gallery || []).map((g: any, i: number) => (
+                  <Fig key={i} src={g.src} alt={g.alt} />
+                ))}
+              </div>
+            </div>
+          </section>
+        </main>
+        <Footer />
+      </>
+    );
+  }
   const { project: p, next } = found;
   return (
     <>
