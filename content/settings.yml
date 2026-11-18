@@ -7,10 +7,6 @@ nav:
   url: /
 - label: about
   url: /about
-- label: resume
-  url: /resume.pdf
-- label: et al.
-  url: /et-al
 connect_title: Let’s connect ☺︎
 credit: Designed and built by Visudha Sathurappan
 site_url: https://example.com

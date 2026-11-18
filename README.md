@@ -24,8 +24,7 @@ Then open http://localhost:3000/admin. Local mode needs no login. Changes are wr
 ## Structure
 
 - `content/projects/*.yml`: case studies. Each page is an ordered list of blocks.
-- `content/etal/*.yml`: additional projects.
-- `content/pages/*.yml` and `content/settings.yml`: home, about, Et al. page text, and site settings.
+- `content/pages/*.yml` and `content/settings.yml`: home and about page text, and site settings.
 - `public/admin/config.yml`: the CMS form definitions.
 - `app/`, `components/`, `lib/`: the Next.js code.
 - `npm run build` writes `out/` and regenerates `vercel.json` (old-URL redirects and cache headers).

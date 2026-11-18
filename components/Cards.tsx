@@ -32,38 +32,3 @@ export function ProjectCard({ p }: { p: any }) {
     </li>
   );
 }
-
-export function EtalCard({ e }: { e: any }) {
-  const external = !!e.external_url;
-  const href = external ? e.external_url : `/${e.slug}`;
-  const inner = e.thumb ? (
-    <Img src={e.thumb} alt={e.title} />
-  ) : null;
-  if (e.thumb) {
-    return (
-      <li>
-        {external ? (
-          <a className="card card-img" href={href} rel="noopener" aria-label={e.title}>{inner}</a>
-        ) : (
-          <Link className="card card-img" href={href} aria-label={e.title}>{inner}</Link>
-        )}
-      </li>
-    );
-  }
-  const body = (
-    <>
-      <span className="card-title">{e.title}</span>
-      <span className="card-cta">{e.cta || 'View project'} <span aria-hidden="true">→</span></span>
-    </>
-  );
-  const style = { ['--bg' as any]: e.card_color || '#e6e1d8' };
-  return (
-    <li>
-      {external ? (
-        <a className="card card-text" href={href} rel="noopener" style={style}>{body}</a>
-      ) : (
-        <Link className="card card-text" href={href} style={style}>{body}</Link>
-      )}
-    </li>
-  );
-}
